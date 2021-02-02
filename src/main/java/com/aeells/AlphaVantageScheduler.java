@@ -6,12 +6,14 @@ import com.crazzyghost.alphavantage.Config;
 
 public abstract class AlphaVantageScheduler
 {
+    private static final int TIME_OUT_SECONDS = 10;
+
     public AlphaVantageScheduler(final AlphaVantageSecret alphaVantageSecret)
     {
         AlphaVantage.api().init(Config
             .builder()
             .key(alphaVantageSecret.getApiKey())
-            .timeOut(10)
+            .timeOut(TIME_OUT_SECONDS)
             .build());
     }
 
