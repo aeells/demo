@@ -64,11 +64,20 @@
       <artifactId>javax.annotation-api</artifactId>
       <scope>compile</scope>
     </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.apache.commons</groupId>-->
+<!--      <artifactId>commons-lang3</artifactId>-->
+<!--      <version>3.11</version>-->
+<!--    </dependency>-->
+
+    <!-- runtime dependencies -->
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
       <scope>runtime</scope>
     </dependency>
+
+    <!-- test dependencies -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
