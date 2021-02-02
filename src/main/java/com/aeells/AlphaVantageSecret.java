@@ -2,7 +2,6 @@ package com.aeells;
 
 import io.micronaut.context.annotation.Value;
 import lombok.Getter;
-import lombok.Setter;
 
 import javax.inject.Singleton;
 
