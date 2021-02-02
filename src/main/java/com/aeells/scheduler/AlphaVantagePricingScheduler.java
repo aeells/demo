@@ -1,5 +1,6 @@
-package com.aeells;
+package com.aeells.scheduler;
 
+import com.aeells.config.AlphaVantageApiConfig;
 import com.crazzyghost.alphavantage.AlphaVantage;
 import com.crazzyghost.alphavantage.parameters.Interval;
 import com.crazzyghost.alphavantage.parameters.OutputSize;
@@ -9,17 +10,19 @@ import io.micronaut.scheduling.annotation.Scheduled;
 import javax.inject.Singleton;
 
 @Singleton
-public final class AlphaVantagePricingScheduler extends AlphaVantageScheduler
+public final class AlphaVantagePricingScheduler extends AlphaVantageFailureHandler
 {
-    public AlphaVantagePricingScheduler(final AlphaVantageSecret alphaVantageSecret)
+    private final AlphaVantage alphaVantageApi;
+
+    public AlphaVantagePricingScheduler(final AlphaVantageApiConfig alphaVantageApiConfig)
     {
-        super(alphaVantageSecret);
+        this.alphaVantageApi = alphaVantageApiConfig.getAlphaVantageApi();
     }
 
     @Scheduled(cron = "* * * * 1-5")
     void everyWeekdayHourly()
     {
-        AlphaVantage.api()
+        this.alphaVantageApi
             .timeSeries()
             .intraday()
             .forSymbol("IBM")

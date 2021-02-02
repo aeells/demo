@@ -1,4 +1,4 @@
-package com.aeells;
+package com.aeells.config;
 
 import io.micronaut.context.annotation.Value;
 import lombok.Getter;
