@@ -1,31 +1,29 @@
 package com.aeells.stock;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import java.time.Instant;
 
-@Getter @Setter
-@NoArgsConstructor
+@Getter @AllArgsConstructor
 public final class Stock
 {
-    private double open;
+    private final double open;
 
-    private double high;
+    private final double high;
 
-    private double low;
+    private final double low;
 
-    private double close;
+    private final double close;
 
-    private double adjustedClose;
+    private final double adjustedClose;
 
-    private int volume;
+    private final long volume;
 
-    private double dividendAmount;
+    private final double dividendAmount;
 
-    private double splitCoefficient;
+    private final double splitCoefficient;
 
     // primarily this is the important bit
-    private Instant date;
+    private final Instant date;
 }
