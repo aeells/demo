@@ -11,10 +11,10 @@ import java.time.format.DateTimeFormatter;
 @Prototype
 public final class StockMapper
 {
-    public Stock map(final StockUnit unit)
+    public Stock map(final Ticker ticker, final StockUnit unit)
     {
         final Instant instant = LocalDate.parse(unit.getDate(), DateTimeFormatter.ofPattern("yyyy-MM-dd")).atStartOfDay(ZoneId.of("America/Los_Angeles")).toInstant();
 
-        return new Stock(unit.getOpen(), unit.getHigh(), unit.getLow(), unit.getClose(), unit.getAdjustedClose(), unit.getVolume(), unit.getDividendAmount(), unit.getSplitCoefficient(), instant);
+        return new Stock(ticker.getSymbol(), unit.getOpen(), unit.getHigh(), unit.getLow(), unit.getClose(), unit.getAdjustedClose(), unit.getVolume(), unit.getDividendAmount(), unit.getSplitCoefficient(), instant);
     }
 }

@@ -8,6 +8,8 @@ import java.time.Instant;
 @Getter @AllArgsConstructor
 public final class Stock
 {
+    private final String symbol;
+
     private final double open;
 
     private final double high;

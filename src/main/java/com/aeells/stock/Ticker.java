@@ -9,10 +9,20 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum Ticker
 {
-//    IBM("IBM"),
+    APPLE("AAPL"),
+    AMAZON("AMZN"),
+    DISNEY("DIS"),
+    GOOGLE("GOOG"),
+    MICROSOFT("MSFT"),
+    SONY("SNE"),
 
-    APPLE("AAPL");
+    // stick with tickers i'm certain of for now...
+//    FTSE_100("UKX"),
+//    FTSE_250("MCX"),
+//    BARRICK_GOLD("ABX"),
+
+    ;
 
     @Getter
-    private String symbol;
+    private final String symbol;
 }

@@ -68,20 +68,15 @@
             <artifactId>javax.annotation-api</artifactId>
             <scope>compile</scope>
         </dependency>
-        <!--    <dependency>-->
-        <!--      <groupId>org.apache.commons</groupId>-->
-        <!--      <artifactId>commons-lang3</artifactId>-->
-        <!--      <version>3.11</version>-->
-        <!--    </dependency>-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.4</version>
+        </dependency>
         <dependency>
             <groupId>com.github.crazzyghost</groupId>
             <artifactId>alphavantage-java</artifactId>
             <version>1.5.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.api-client</groupId>
-            <artifactId>google-api-client</artifactId>
-            <version>1.31.2</version>
         </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
